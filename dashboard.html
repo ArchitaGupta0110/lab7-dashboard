@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Components Dashboard</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+  <style>
+    .flip-card {
+      width: 260px;
+      height: 320px;
+      perspective: 1000px;
+    }
+    .flip-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    .flip-card:hover .flip-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .flip-front {
+      background: #fff;
+    }
+    .flip-front img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .flip-back {
+      background: #0d6efd;
+      color: white;
+      transform: rotateY(180deg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body class="bg-light p-4">
+
+  <h3 class="mb-4">Bootstrap Components Dashboard</h3>
+
+  <div class="accordion" id="dashboard">
+
+    
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#cards">
+          Cards
+        </button>
+      </h2>
+      <div id="cards" class="accordion-collapse collapse show" data-bs-parent="#dashboard">
+        <div class="accordion-body">
+          <div class="row g-4">
+            <div class="col-md-3">
+              <div class="flip-card">
+                <div class="flip-inner">
+              
+                  <div class="flip-face flip-front">
+                    <img src="1.png" alt="Card Image">
+                    <div class="p-3">
+                      <h5 class="card-title">Card One</h5>
+                      <p class="small text-muted">Hover to flip</p>
+                      <a href="#" class="btn btn-primary btn-sm">Go</a>
+                    </div>
+                  </div>
+              
+                  <div class="flip-face flip-back">
+                    <div>
+                      <h6>Back Side</h6>
+                      <p class="small">Extra details here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#alerts">
+          Alerts
+        </button>
+      </h2>
+      <div id="alerts" class="accordion-collapse collapse" data-bs-parent="#dashboard">
+        <div class="accordion-body">
+          <div class="alert alert-success">Success alert—check it out!</div>
+          <div class="alert alert-warning">Warning alert—check it out!</div>
+          <div class="alert alert-danger">Danger alert—check it out!</div>
+        </div>
+      </div>
+    </div>
+
+   
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#buttons">
+          Buttons
+        </button>
+      </h2>
+      <div id="buttons" class="accordion-collapse collapse" data-bs-parent="#dashboard">
+        <div class="accordion-body">
+          <button class="btn btn-primary">Primary</button>
+          <button class="btn btn-secondary">Secondary</button>
+          <button class="btn btn-success">Success</button>
+          <button class="btn btn-danger">Danger</button>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#table">
+          Table
+        </button>
+      </h2>
+      <div id="table" class="accordion-collapse collapse" data-bs-parent="#dashboard">
+        <div class="accordion-body">
+          <table class="table table-striped">
+            <thead class="table-dark">
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Archita Gupta</td>
+                <td>architagupta@gmail.com</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Hari</td>
+                <td>Hari@gmail.com</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
